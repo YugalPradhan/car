@@ -11,7 +11,7 @@
     .hide{
         display : none;
     }
-    .car{background: url('enemycar4.png');
+    .car{background: url('./images/enemycar4.png');
     background-repeat: no-repeat;
         background-size:100% 100%;
         height:70px;
@@ -39,7 +39,7 @@
     .enemy{
         height:70px;
         width: 50px;
-        background:url('enemycar2.png');
+        background:url('./images/enemycar2.png');
         background-repeat: no-repeat;
         background-size:100% 100%;
         position: absolute;
@@ -49,7 +49,7 @@
         overflow: hidden;
         width:100%;
         height:97vh;
-        background: url('yellowcar.jpg');
+        background: url('./images/yellowcar.jpg');
         background-repeat: no-repeat;
         background-size:100% 100%;
         /* above statement is to hide both vertical and horizantal scrollbar */
@@ -96,9 +96,9 @@
     let speed=4;
     let speed1=5;
     let score1=0;
-    let music =new Audio('music.mp3');
-    let crash=new Audio('crash.wav');
-    let move=new Audio('move1.mp3');
+    let music =new Audio('./audio/music.mp3');
+    let crash=new Audio('./audio/crash.wav');
+    let move=new Audio('./audio/move1.mp3');
     document.addEventListener('keydown',keydown);
     document.addEventListener("keyup",keyup);
     startscreen.addEventListener('click',start);

@@ -113,6 +113,8 @@
         gamearea.classList.remove('hide');
         startscreen.classList.add('hide');
         score.classList.remove('hide');
+		createRoadStrip()
+		createEnemies()
         window.requestAnimationFrame(gameplay);
         let car= document.createElement('div');
     car.setAttribute('class','car');
@@ -139,6 +141,7 @@
     moveenemy(car);
     score.innerHTML="score :"+ score1;
     }
+	function createRoadStrip(){
     for(i=0;i<6;i++)
     {
     let roadstrip=document.createElement('div');
@@ -147,6 +150,9 @@
     roadstrip.style.top=(i*110) + "px";
     roadstrip.y=(i*110);
   }
+	}
+
+	function createEnemies(){
      for(i=0;i<3;i++)
     {
     let enemy=document.createElement('div');
@@ -157,6 +163,7 @@
     enemy.x=Math.random()*330 + 25;
     enemy.style.left=enemy.x + "px";
   }
+	}
     
   function movelines()
   {
@@ -209,8 +216,12 @@
     }
     function restart()
     {
-        document.location.href='';
-        // above code is to refresh the code 
+		gamearea.innerHTML = ''
+		gamearea.classList.add('hide')
+		startscreen.innerHTML = 'Click to replay'
+		startscreen.classList.remove('hide')
+		score.classList.add('hide')
+		score1 = 0
     }
 </script>
 </html>

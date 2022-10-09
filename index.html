@@ -163,7 +163,8 @@
         gamearea.appendChild(enemy);
         enemy.style.top = (i * 180) + "px";
         enemy.y = (i * 180);
-        enemy.x = Math.random() * 330 + 25;
+        // This will make sure no enemy cars spawn left to player's right edge at first
+        enemy.x = Math.random() * 200+ 150;
         enemy.style.left = enemy.x + "px";
     }
 

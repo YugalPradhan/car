@@ -54,23 +54,62 @@
         background-size:100% 100%;
         /* above statement is to hide both vertical and horizantal scrollbar */
     }
-    .startscreen{        font-family: cursive;
-    margin: auto;
-    height: 107px;
-    width: 202px;
-    background-color: #3c99d5;
-    color: white;
-    border-radius: 20px;
-    padding-top: 11px;
-    text-align: center;
-    font-size: 33px;
-    box-shadow: 0px 6px 10px #c35357;
-    position: relative;
-    top: 200px;
-    cursor:pointer;
-    }
-    .score{
-        height: 44px;
+
+/* new button CSS */
+.button-64 {
+  margin-top: 15em;
+  /* margin: auto; */
+  margin-left: 42%;
+  text-transform: capitalize;
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+.score{
+    height: 44px;
     width: 135px;
     background-color: blue;
     color: white;
@@ -86,12 +125,16 @@
 </style>
 <body>
     <div class="score hide">score :</div>
-    <div class="startscreen ">click to start </div>
+    <!-- <div class="startscreen ">click to start </div> -->
+    <!-- <button class="button-85" role="button">click to start</button> -->
+    <button class="button-64" role="button"><span class="text">click to start</span></button>
+
     <div class="gamearea hide"></div>
 </body>
 <script>
     let score=document.querySelector('.score');
-    let startscreen=document.querySelector('.startscreen');
+    // let startscreen=document.querySelector('.startscreen');
+    let startscreen=document.querySelector('.button-64');
     let gamearea=document.querySelector('.gamearea');
     let speed=4;
     let speed1=5;

@@ -39,6 +39,7 @@
     .enemy{
         height:70px;
         width: 50px;
+        background:url('enemycar2.png');
         background-repeat: no-repeat;
         background-size:100% 100%;
         position: absolute;
@@ -149,14 +150,12 @@
      for(i=0;i<3;i++)
     {
     let enemy=document.createElement('div');
-    var sinn=String(Math.ceil(Math.random()*4));
     enemy.setAttribute('class',"enemy");
     gamearea.appendChild(enemy);
     enemy.style.top=(i*180) + "px";
     enemy.y=(i*180);
     enemy.x=Math.random()*330 + 25;
     enemy.style.left=enemy.x + "px";
-    enemy.style.backgroundImage=`url('enemycar${sinn}.png')`;
   }
     
   function movelines()
